@@ -11,7 +11,7 @@ int main(){
 	int i = 0;
 
 	while(1){
-		avail = serialDataAvail(handle) 
+		avail = serialDataAvail(handle);
 		if(avail >= 0){
 			data1 = serialGetchar(handle);
 			data2 = serialGetchar(handle);
