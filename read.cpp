@@ -13,7 +13,7 @@ int main(){
 	while(1){
 		avail = serialDataAvail(handle);
 		cout << avail <<"\n";
-		if(avail > 1){
+		if(avail >= 0){
 			data1 = serialGetchar(handle);
 			data2 = serialGetchar(handle);
 			cout << "data1: " << data1 << "\n";
