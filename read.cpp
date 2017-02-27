@@ -1,5 +1,6 @@
 #include<iostream>
 #include<wiringSerial.h>
+#include<unistd.h>
 
 using namespace std;
 
@@ -10,12 +11,15 @@ int main(){
 	int i = 0;
 
 	while(1){
-		//avail = serialDataAvail(handle);
-		//cout << avail <<"\n";
-		data1 = serialGetchar(handle);
-		data2 = serialGetchar(handle);
-		cout << "data1: " << data1 << "\n";
-		cout << "data2: " << data2 << "\n";
+		avail = serialDataAvail(handle);
+		cout << avail <<"\n";
+		if(avail > 1){
+			data1 = serialGetchar(handle);
+			data2 = serialGetchar(handle);
+			cout << "data1: " << data1 << "\n";
+			cout << "data2: " << data2 << "\n";
+		}
+		sleep(2);
 	}
 	return 0;
 }
