@@ -12,14 +12,14 @@ int main(){
 	int i = 0;
 
 	while(1){
-		avail = serialDataAvail(handle);
-		cout << avail << "\n";
-		if(avail >= 0){
+		//avail = serialDataAvail(handle);
+		//cout << avail << "\n";
+		//if(avail >= 0){
 			data1 = serialGetchar(handle);
 			data2 = serialGetchar(handle);
 			cout << "data1: " << data1 << "\n";
 			cout << "data2: " << data2 << "\n";
-		}
+		//}
 		sleep(2);
 	}
 	return 0;
