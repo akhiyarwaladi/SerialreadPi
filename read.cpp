@@ -11,7 +11,7 @@ int main(){
 	int i = 0;
 
 	while(1){
-		data1 = serialGetchar(handle)
+		data1 = serialGetchar(handle);
 		if(data1 >= 0){
 			data1 = serialGetchar(handle);
 			data2 = serialGetchar(handle);
