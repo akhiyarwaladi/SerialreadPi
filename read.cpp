@@ -11,8 +11,8 @@ int main(){
 	int i = 0;
 
 	while(1){
-		data1 = serialGetchar(handle);
-		if(data1 >= 0){
+		avail = serialDataAvail(handle) 
+		if(avail >= 0){
 			data1 = serialGetchar(handle);
 			data2 = serialGetchar(handle);
 			cout << "data1: " << data1 << "\n";
